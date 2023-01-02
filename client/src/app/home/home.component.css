@@ -1,0 +1,22 @@
+.homeImg{
+  height: 500px;
+  width: 100%;
+  margin: 0 0 50px 0;
+}
+.example-card {
+  max-width: 400px;
+}
+.example-header-image-res {
+  background-image: url('../../assets/restoranIcon1.png');
+  background-size: cover;
+}
+
+.example-header-image-acti {
+  background-image: url('../../assets/activities-icon.png');
+  background-size: cover;
+}
+
+.example-header-image-smj {
+  background-image: url('../../assets/sobaIcon.jpg');
+  background-size: cover;
+}

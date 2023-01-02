@@ -1,0 +1,7 @@
+#sect1 {
+  height: 100%;
+  color: #fff;
+  background-image: url("../../assets/aboutBackground.jpg");
+  background-size: 100% ;
+  background-size: cover;
+}

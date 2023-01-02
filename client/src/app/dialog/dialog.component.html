@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Rezervacija</h1>
+<div mat-dialog-content>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Datum prijave</mat-label>
+      <input matInput [matDatepicker]="pickerP" name="datumPrijave" ngModel>
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="pickerP"></mat-datepicker-toggle>
+      <mat-datepicker #pickerP></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Datum odjave</mat-label>
+      <input matInput [matDatepicker]="pickerO" name="datumOdjave" ngModel>
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="pickerO"></mat-datepicker-toggle>
+      <mat-datepicker #pickerO></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Broj osoba</mat-label>
+      <mat-select name="brojOsoba" ngModel>
+        <mat-option *ngFor="let item of nOsobe" [value]="item.value">
+          {{item.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Vrsta smještaja</mat-label>
+      <mat-select name="smjestej" ngModel>
+        <mat-option *ngFor="let item of smjestaj" [value]="item.value">
+          {{item.value}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-raised-button color="primary" mat-dialog-close>Zatvori</button>
+      <button mat-raised-button color="warn" type="submit">{{actionBtn}}</button>
+    </div>
+  </form>
+</div>
+
+
